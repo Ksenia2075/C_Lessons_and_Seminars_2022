@@ -2,7 +2,7 @@
 Console.Clear();
 int[,] pic = new int[,]
 {
-// здесь нужен заполненный двумерный массив
+// здесь надо заполнить
 }
 
 void PrintImage(int[,] image)
