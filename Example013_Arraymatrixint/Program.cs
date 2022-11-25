@@ -2,13 +2,31 @@
 // matrix[0, 0]  matrix[0, 1]  matrix[0, 2]
 // matrix[1, 0]  matrix[1, 1]  matrix[1, 2]
 Console.Clear();
-int[,] matrix = new int[2, 3];
 
-for(int i=0; i<2; i++)
+void PrintArray(int[,] matr)
 {
-    for(int j=0; j<3; j++)
+    for(int i=0; i<matr.GetLength(0); i++)
     {
-        Console.Write($"{matrix[i, j]} ");
+        for(int j=0; j<matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }
+
+void FillArray(int[,] matr)
+{
+    for(int i=0; i<matr.GetLength(0); i++)
+    {
+        for(int j=0; j<matr.GetLength(1); j++)
+        {
+            matr[i, j] = new Random().Next(1, 10);
+        }
+    }
+}
+int[,] matrix = new int[3, 4];
+PrintArray(matrix);
+Console.WriteLine();
+FillArray(matrix);
+PrintArray(matrix);
