@@ -30,8 +30,21 @@ void PrintArray(int[] arr)
     }
 }
 
+int[] ReversArray2(int[] inArray)
+{
+    int[] result = new int[inArray.Length];
+    for(int i=0; i<inArray.Length;i++)
+    {
+        result[i] = inArray[inArray.Length-1-i];
+    }
+    return result;
+}
+
 int[] array = GetArray(10,0,10);
 PrintArray(array);
 Console.WriteLine();
-ReversArray1(array);
-PrintArray(array);
+//ReversArray1(array);
+//PrintArray(array);
+Console.WriteLine();
+int[] reversArray = ReversArray2(array);
+PrintArray(reversArray);
